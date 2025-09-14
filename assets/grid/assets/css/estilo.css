@@ -1,0 +1,146 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.figtree-uniquifier {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.main-container {
+
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1fr;
+    grid-template-rows: 0.5fr 4fr 0.25fr;
+    grid-template-areas:  'header header header'
+                          'menu main main'
+                          'footer footer footer';
+    height: 80vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(243, 119, 243);
+    
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 0.5vh;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8vh;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.logo img {
+    max-width: 10vh;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1vh;
+    margin-left: 1.5vh;
+}
+
+
+.menu {
+    grid-area: menu;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    border-right: 1px solid rgb(232, 160, 241);
+    
+}
+
+.main { 
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+}
+
+.caja-producto {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2vh;
+}
+
+.caja-producto img {
+    padding:  5vh;
+    max-width: 40vh;
+    object-fit: cover;
+ }
+
+.texto-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6%;
+}
+
+.mi-boton {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(243, 119, 243); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.mi-boton:hover {
+    background-color: #a689ee; 
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(243, 119, 243);
+}
+
+.footer li {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    color: rgb(255, 255, 255);
+}
+
+
+h2 {
+    margin-top: 3vh;
+}
+
+li {
+    list-style: none;
+    padding: 1.5vh;
+    color: rgb(255, 122, 255);
+
+}

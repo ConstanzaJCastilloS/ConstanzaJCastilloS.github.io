@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.inter-uniquifier {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+.main {
+    grid-area: main;
+    background-color: rgb(248, 248, 248);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.main-container {
+
+display: grid;
+grid-template-areas: 'header'
+                    'main'
+                    'footer';
+grid-template-rows: 1fr 8fr 1fr;
+grid-template-columns: 1fr;
+height: 100vh;
+
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 7dvh;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 2dvh;
+    margin-right: 2dvh;
+}
+
+h2 {
+    margin-left: 2dvh;
+
+}
+.burger {
+  display:block;
+  font-size: 3dvh;
+  cursor: pointer;
+  margin-left: 4dvh;
+}
+
+.lista {
+  display:none;
+  color: antiquewhite;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2dvh;
+    overflow-y:visible;
+}
+
+.caja-producto {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15dvh;
+    width: 80%;
+}
+
+.caja-producto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+
+.texto-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2dvh;
+    margin-bottom: 2dvh;
+}
+
+.mi-boton {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color b 0.3s ease;
+}
+
+.mi-boton:hover {
+    background-color: #a689ee; 
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: small;
+    text-align: center;
+    padding: 2%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.footer .redes {
+    grid-area: 'footer';
+    display: flex;
+    flex-direction: row; 
+    gap: 3dvh; 
+    margin-top: 1dvh;
+}
+
+
+
+@media (min-width: 576px) {
+    .main-container {
+        display: grid;
+        grid-template-areas: 'header header'
+                            'main main'
+                            'footer footer ';
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+nav {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 7dvh;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 2dvh;
+    margin-right: 2dvh;
+}
+
+.titulo {
+    display: flex;
+    font-size:xx-large;
+}
+
+.burger {
+  display:none;
+}
+
+.lista {
+  display: flex;
+  justify-content: center;
+}
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 90dvh;
+}
+
+li {
+    display: flex;
+    padding: 2dvh;
+    font-size: x-large;
+}
+
+.nav-link {
+    color: antiquewhite;
+    text-decoration: none; 
+} 
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 5dvh;
+    overflow-y:scroll;
+    
+}
+
+.caja-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100dvh;
+    margin-left: 7dvh;
+    
+}
+
+.caja-producto img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+.texto-producto {
+    text-align: center;
+    font-size: x-large;
+    padding: 6%;
+}
+
+.boton-enlace {
+  display: inline-block; 
+  background-color: #000000; 
+  color: white; 
+  padding: 10px 20px; 
+  border:none;
+  text-align: center; 
+  cursor: pointer; 
+  font-size: large;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.boton-enlace:hover {
+  background-color: #a689ee; 
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    margin-top: 4dvh;
+}
+
+}
